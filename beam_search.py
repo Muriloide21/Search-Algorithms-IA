@@ -52,7 +52,7 @@ def beam_search(types, max_size, m):
             if len(aux) == 0:
                 break
 
-        print(f)
+        #print(f)
 
 if __name__ == "__main__":
     result = beam_search(TIPOS, 19, 2)

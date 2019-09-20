@@ -73,5 +73,5 @@ def hillClimb(types, max_size):
 
 if __name__ == "__main__":
     result = hillClimb(TIPOS, 19)
-    #print(stateSize(result, TIPOS))
-    #print(result)
+    print(result)
+    print("Custo da solução: "+str(stateSize(result, TIPOS))+", Valor da solução: "+str(stateValue(result, TIPOS)))
