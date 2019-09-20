@@ -35,10 +35,14 @@ def regressState(state):
     regression = list(filter(isPositiveState, regression))
     return regression
 
-def getNeighbor(state, types, maxsize):
+def neighborhood(state):
     expandedStates = expandState(state)
     regressionStates = regressState(state)
     newStates = expandedStates + regressionStates
+    return newStates
+
+def getNeighbor(state, types, maxsize):
+    newStates = neighborhood(state)
     newStates = list(filter(lambda x: stateIsValid(x, types, maxsize), newStates))
     aux = random.randint(0,len(newStates)-1)
     neighbor = newStates[aux]
